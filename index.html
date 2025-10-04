@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John McKenna's Blog</title>
+    <title>John's Projects</title>
     <style>
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
@@ -11,23 +11,24 @@
             line-height: 1.7;
             color: #333;
             background-color: #fcfcfc;
-            max-width: 800px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
-        h1 {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 30px;
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2em;
             font-weight: 600;
+            margin-bottom: 30px;
+            text-align: left;
         }
 
         nav {
-            border-top: 1px solid #ccc;
-            border-bottom: 1px solid #ccc;
-            padding: 15px 0;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         nav ul {
@@ -35,60 +36,104 @@
             padding: 0;
             margin: 0;
             display: flex;
-            justify-content: center;
-            gap: 30px;
+            justify-content: space-between; /* This creates the even spacing */
+            align-items: center;
+        }
+        
+        nav ul li {
+            position: relative; /* Needed for the dropdown */
         }
 
         nav a {
             text-decoration: none;
             color: #333;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 1em;
         }
 
         nav a:hover {
             text-decoration: underline;
         }
 
-        main {
+        /* --- Dropdown Styles --- */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fcfcfc;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            border: 1px solid #eee;
+            padding: 10px 0;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
             text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            text-decoration: none;
+        }
+        
+        /* Show the dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown .drop-btn {
+            cursor: pointer;
+        }
+
+        main h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
         }
         
         footer {
-            text-align: center;
             margin-top: 60px;
-            font-size: 0.8em;
-            color: #888;
         }
+
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>John's Projects</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>John's Projects</h1>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="arbitrack.html">Arbitrack</a></li>
-            <li><a href="consulting.html">Consulting</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="dropdown">
+                    <span class="drop-btn">Categories &#9662;</span>
+                    <div class="dropdown-content">
+                        <a href="/tags/arbitrage.html">Arbitrage</a>
+                        <a href="/tags/finance.html">Finance</a>
+                        <a href="/tags/tech.html">Tech</a>
+                    </div>
+                </li>
+                <li><a href="business1.html">Business 1</a></li>
+                <li><a href="business2.html">Business 2</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-    <main>
-        <h2>Welcome</h2>
-        <p>This is the beginning of my new blog. It is a space for tracking progress on my different projects, sharing thoughts on value investing, and exploring topics related to financial independence and technology.</p>
-        <p>The goal for this site is to be a simple, text-forward repository of ideas, built on a foundation of minimalism and clarity.</p>
-    </main>
+        <main>
+            <h2>Welcome</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </main>
 
-    <footer>
-        <p>&copy; 2025 John McKenna</p>
-    </footer>
+        <footer>
+            </footer>
+    </div>
 
 </body>
 </html>

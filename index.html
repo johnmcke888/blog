@@ -3,19 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Minimal Blog</title>
+    <title>John McKenna's Blog</title>
     <style>
-        body { 
-            font-family: serif; 
-            line-height: 1.6; 
-            max-width: 800px; 
-            margin: 40px auto; 
-            padding: 0 20px; 
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #333;
+            background-color: #fcfcfc;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        nav {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 15px 0;
+            margin-bottom: 40px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            text-align: left;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.8em;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome</h1>
-    <p>This is the beginning of my new blog. It is hosted for free on Cloudflare Pages.</p>
+
+    <header>
+        <h1>John's Projects</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="arbitrack.html">Arbitrack</a></li>
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Welcome</h2>
+        <p>This is the beginning of my new blog. It is a space for tracking progress on my different projects, sharing thoughts on value investing, and exploring topics related to financial independence and technology.</p>
+        <p>The goal for this site is to be a simple, text-forward repository of ideas, built on a foundation of minimalism and clarity.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 John McKenna</p>
+    </footer>
+
 </body>
 </html>
